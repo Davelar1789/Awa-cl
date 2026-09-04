@@ -1,0 +1,164 @@
+.shell {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 232px;
+  flex-shrink: 0;
+  background: var(--navy);
+  color: var(--text-on-dark);
+  display: flex;
+  flex-direction: column;
+  padding: 20px 14px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 10px 24px;
+}
+.logoMark {
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  background: var(--gold);
+  color: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+.logoText {
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: -0.01em;
+}
+.logoSub {
+  display: block;
+  font-size: 10.5px;
+  font-weight: 500;
+  color: var(--text-on-dark-muted);
+  margin-top: 1px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  color: var(--text-on-dark-muted);
+  font-size: 13.5px;
+  font-weight: 500;
+  transition: background 0.12s ease, color 0.12s ease;
+}
+.navLink:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-on-dark);
+}
+.navLinkActive {
+  background: var(--gold-soft);
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.navBadge {
+  margin-left: auto;
+  background: var(--gold);
+  color: var(--navy);
+  font-size: 10px;
+  font-weight: 800;
+  padding: 1px 6px;
+  border-radius: 999px;
+}
+
+.footer {
+  border-top: 1px solid var(--navy-border);
+  padding-top: 14px;
+  margin-top: 8px;
+}
+
+.userRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 8px 10px;
+}
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--navy-light);
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 12.5px;
+  flex-shrink: 0;
+}
+.userMeta { min-width: 0; }
+.userName {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-on-dark);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.userRole {
+  font-size: 11px;
+  color: var(--text-on-dark-muted);
+  text-transform: capitalize;
+}
+
+.logoutBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 9px 12px;
+  border: none;
+  background: transparent;
+  color: var(--text-on-dark-muted);
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+.logoutBtn:hover {
+  background: rgba(220, 38, 38, 0.12);
+  color: #f87171;
+}
+
+.main {
+  flex: 1;
+  overflow-y: auto;
+  min-width: 0;
+}
+
+.connBar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  font-weight: 600;
+  margin: 0 8px 10px;
+}
+.connOnline { color: var(--text-on-dark-muted); }
+.connOffline { color: var(--red); background: rgba(220, 38, 38, 0.12); }
+.connDot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; }

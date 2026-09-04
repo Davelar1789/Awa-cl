@@ -1,0 +1,43 @@
+{
+  "expo": {
+    "name": "AwaBus Driver",
+    "slug": "awabus-driver",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#0F1923",
+    "platforms": ["android"],
+    "splash": {
+      "backgroundColor": "#0F1923",
+      "resizeMode": "contain"
+    },
+    "android": {
+      "package": "com.awabus.driver",
+      "backgroundColor": "#0F1923",
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION",
+        "FOREGROUND_SERVICE",
+        "FOREGROUND_SERVICE_LOCATION"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "AwaBus needs your location at all times during a trip to alert parents when the bus is near their child's stop.",
+          "locationAlwaysPermission": "AwaBus needs background location so tracking continues even when your screen is off.",
+          "locationWhenInUsePermission": "AwaBus needs your location to track the bus route.",
+          "isAndroidBackgroundLocationEnabled": true,
+          "isAndroidForegroundServiceEnabled": true
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": ""
+      }
+    }
+  }
+}

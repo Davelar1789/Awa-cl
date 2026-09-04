@@ -1,0 +1,124 @@
+:root {
+  /* Brand */
+  --navy: #0f1923;
+  --navy-light: #16222f;
+  --navy-border: rgba(255, 255, 255, 0.08);
+  --gold: #fdb913;
+  --gold-dim: #c9940f;
+  --gold-soft: rgba(253, 185, 19, 0.14);
+
+  /* Surface */
+  --bg: #f5f6f8;
+  --surface: #ffffff;
+  --surface-alt: #fafbfc;
+  --border: #e6e8ec;
+  --border-strong: #d7dae0;
+
+  /* Text */
+  --text-primary: #14202b;
+  --text-secondary: #5b6b7c;
+  --text-muted: #8b98a5;
+  --text-on-dark: #f5f2ed;
+  --text-on-dark-muted: #8a9bb0;
+
+  /* Status */
+  --green: #16a34a;
+  --green-bg: rgba(22, 163, 74, 0.12);
+  --red: #dc2626;
+  --red-bg: rgba(220, 38, 38, 0.1);
+  --amber: #d97706;
+  --amber-bg: rgba(217, 119, 6, 0.12);
+  --blue: #2563eb;
+  --blue-bg: rgba(37, 99, 235, 0.1);
+  --gray: #6b7280;
+  --gray-bg: rgba(107, 114, 128, 0.1);
+
+  /* Shape */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 999px;
+  --shadow-sm: 0 1px 2px rgba(15, 25, 35, 0.05);
+  --shadow-md: 0 4px 16px rgba(15, 25, 35, 0.08);
+  --shadow-lg: 0 12px 32px rgba(15, 25, 35, 0.14);
+
+  --font-ui: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Helvetica, Arial, sans-serif;
+
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-ui);
+  background: var(--bg);
+  color: var(--text-primary);
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+::selection {
+  background: var(--gold-soft);
+}
+
+/* Leaflet z-index sits under our overlays/modals */
+.leaflet-container {
+  font-family: var(--font-ui);
+  z-index: 1;
+}
+
+.page-loader {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--navy);
+}
+
+.page-loader::after {
+  content: '';
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 3px solid rgba(253, 185, 19, 0.25);
+  border-top-color: var(--gold);
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 999px;
+}
